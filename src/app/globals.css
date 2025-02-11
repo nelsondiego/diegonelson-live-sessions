@@ -56,3 +56,7 @@ body {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
+
+.font-pacifico {
+  font-family: var(--font-pacifico), cursive;
+}

@@ -6,10 +6,6 @@ const AnimatedBackground = () => {
     <div className="absolute inset-0">
       {/* Glow Effects */}
       <div className="absolute inset-0">
-        {/* Círculos de glow con animación */}
-        <div className="absolute top-0 -left-20 w-96 h-96 bg-neon-pink/30 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-0 -right-20 w-96 h-96 bg-neon-cyan/30 rounded-full blur-[100px] animate-pulse delay-700" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-neon-magenta/20 rounded-full blur-[100px] animate-pulse delay-1000" />
 
         {/* Dots Pattern */}
         <div className="absolute inset-0"

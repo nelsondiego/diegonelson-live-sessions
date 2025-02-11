@@ -34,7 +34,8 @@ const ShareButton: FC<ShareButtonProps> = ({ title, date, time, location }) => {
   return (
     <button 
       onClick={handleShare}
-      className="mt-4 w-full bg-gradient-to-r from-indigo-500 to-orange-500 text-white py-2 rounded-full hover:from-indigo-400 hover:to-orange-400 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+      className="w-8 h-8 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+      title="Compartir evento"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +53,6 @@ const ShareButton: FC<ShareButtonProps> = ({ title, date, time, location }) => {
         <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
       </svg>
-      Compartir
     </button>
   );
 };
