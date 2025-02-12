@@ -102,7 +102,13 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <head>
-        <link rel="icon" type="image/svg+xml"  href="/favicon.svg" />
+        
+        <link
+          rel="icon"
+          href="/icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}>
         {children}
