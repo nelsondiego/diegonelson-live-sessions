@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, Globe, Sparkles, Star, Zap, Home, MessageCircle, Clock, CheckCircle2, Image as ImageIcon, Share2, Newspaper, Radio, Flag } from "lucide-react";
+import { Mail, Phone, Globe, Star, Zap, Home, MessageCircle, Clock, CheckCircle2, Image as ImageIcon, Share2, Newspaper, Radio, Flag } from "lucide-react";
 import AnimatedBackground from "../components/AnimatedBackground";
 
 type VenueStatus = "en comunicacion" | "preconfirmado" | "confirmado";
@@ -10,11 +10,6 @@ type VenueStatus = "en comunicacion" | "preconfirmado" | "confirmado";
 interface Venue {
   name: string;
   status: VenueStatus;
-}
-
-interface Feature {
-  text: string;
-  icon: any;
 }
 
 const plans = [
