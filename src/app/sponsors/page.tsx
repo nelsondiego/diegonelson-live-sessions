@@ -24,7 +24,7 @@ const plans = [
     color: "neon-pink",
     features: [
       "Todo lo del plan básico",
-      "Promoción en redes sociales",
+      "Publicidad en redes sociales",
       "Inclusión de tu marca en la folletería del evento"
     ]
   },
