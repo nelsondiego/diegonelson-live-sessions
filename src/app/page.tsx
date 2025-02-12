@@ -5,28 +5,28 @@ import AnimatedBackground from "./components/AnimatedBackground";
 import UpcomingDates from "./components/UpcomingDates";
 import { Session, Sponsor } from "./types";
 const upcomingSessions: Session[] = [
-  {
-    id: 1,
-    title: "Clover",
-    date: "Vie, 15 Mar",
-    time: "20:00 - 01:00",
-    location: "Clover",
-    address: "Ayacucho 285",
-    description: "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
-    status: "upcoming",
-    image: "/places/clover.webp"
-  },
-  {
-    id: 2,
-    title: "Conejo Negro",
-    date: "Sab, 30 Mar",
-    time: "21:00 - 02:00",
-    location: "Conejo Negro",
-    address: "Liniers 22",
-    description: "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
-    status: "upcoming",
-    image: "/places/conejonegro.webp"
-  },
+  // {
+  //   id: 1,
+  //   title: "Clover",
+  //   date: "Vie, 15 Mar",
+  //   time: "20:00 - 01:00",
+  //   location: "Clover",
+  //   address: "Ayacucho 285",
+  //   description: "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
+  //   status: "upcoming",
+  //   image: "/places/clover.webp"
+  // },
+  // {
+  //   id: 2,
+  //   title: "Conejo Negro",
+  //   date: "Sab, 30 Mar",
+  //   time: "21:00 - 02:00",
+  //   location: "Conejo Negro",
+  //   address: "Liniers 22",
+  //   description: "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
+  //   status: "upcoming",
+  //   image: "/places/conejonegro.webp"
+  // },
   // {
   //   id: 3,
   //   title: "El Jardín Secreto",
