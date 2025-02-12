@@ -6,28 +6,28 @@ import UpcomingDates from "./components/UpcomingDates";
 import Navigation from "./components/Navigation";
 import { Session, Sponsor } from "./types";
 const upcomingSessions: Session[] = [
-  // {
-  //   id: 1,
-  //   title: "Clover",
-  //   date: "Vie, 15 Mar",
-  //   time: "20:00 - 01:00",
-  //   location: "Clover",
-  //   address: "Ayacucho 285",
-  //   description: "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
-  //   status: "upcoming",
-  //   image: "/places/clover.webp"
-  // },
-  // {
-  //   id: 2,
-  //   title: "Conejo Negro",
-  //   date: "Sab, 30 Mar",
-  //   time: "21:00 - 02:00",
-  //   location: "Conejo Negro",
-  //   address: "Liniers 22",
-  //   description: "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
-  //   status: "upcoming",
-  //   image: "/places/conejonegro.webp"
-  // },
+  {
+    id: 1,
+    title: "Clover",
+    date: "Vie, 15 Mar",
+    time: "20:00 - 01:00",
+    location: "Clover",
+    address: "Ayacucho 285",
+    description: "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
+    status: "upcoming",
+    image: "/places/clover.webp"
+  },
+  {
+    id: 2,
+    title: "Conejo Negro",
+    date: "Sab, 30 Mar",
+    time: "21:00 - 02:00",
+    location: "Conejo Negro",
+    address: "Liniers 22",
+    description: "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
+    status: "upcoming",
+    image: "/places/conejonegro.webp"
+  },
   // {
   //   id: 3,
   //   title: "El Jardín Secreto",
@@ -199,34 +199,37 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-neon-pink/50 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-neon-pink/20">
-              <div className="relative mb-6">
-                <Headphones className="w-12 h-12 text-neon-pink group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute -inset-1 bg-neon-pink/20 rounded-full blur-sm" />
+            <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-neon-pink/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:shadow-neon-pink/20">
+              <div className="relative mb-6 w-12 h-12 rounded-full bg-neon-pink/10 flex items-center justify-center group-hover:bg-neon-pink/20 transition-colors duration-500">
+                <Headphones className="w-6 h-6 text-neon-pink group-hover:scale-110 transition-transform duration-500" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-pink transition-colors">Música Selecta</h3>
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-pink transition-colors">
+                Música Selecta
+              </h3>
               <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
                 Deep house, disco house y funky house cuidadosamente seleccionados para crear la atmósfera perfecta en cada sesión.
               </p>
             </div>
 
-            <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-neon-cyan/20">
-              <div className="relative mb-6">
-                <MapPin className="w-12 h-12 text-neon-cyan group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute -inset-1 bg-neon-cyan/20 rounded-full blur-sm" />
+            <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:shadow-neon-cyan/20">
+              <div className="relative mb-6 w-12 h-12 rounded-full bg-neon-cyan/10 flex items-center justify-center group-hover:bg-neon-cyan/20 transition-colors duration-500">
+                <MapPin className="w-6 h-6 text-neon-cyan group-hover:scale-110 transition-transform duration-500" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-cyan transition-colors">Espacios Únicos</h3>
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-cyan transition-colors">
+                Espacios Únicos
+              </h3>
               <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
                 Bares y restaurantes seleccionados por su ambiente exclusivo, donde cada rincón está pensado para vivir una experiencia especial.
               </p>
             </div>
 
-            <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-neon-magenta/50 transition-all duration-300 group hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-neon-magenta/20">
-              <div className="relative mb-6">
-                <Sparkles className="w-12 h-12 text-neon-magenta group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute -inset-1 bg-neon-magenta/20 rounded-full blur-sm" />
+            <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-neon-magenta/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:shadow-neon-magenta/20">
+              <div className="relative mb-6 w-12 h-12 rounded-full bg-neon-magenta/10 flex items-center justify-center group-hover:bg-neon-magenta/20 transition-colors duration-500">
+                <Sparkles className="w-6 h-6 text-neon-magenta group-hover:scale-110 transition-transform duration-500" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-magenta transition-colors">Momentos Mágicos</h3>
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-magenta transition-colors">
+                Momentos Mágicos
+              </h3>
               <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
                 Cada sesión está diseñada para crear recuerdos inolvidables, donde amigos, música y gastronomía se encuentran en perfecta armonía.
               </p>
@@ -259,60 +262,44 @@ export default function Home() {
           </div>
           
           {upcomingSessions.filter(session => session.status === 'upcoming').length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {upcomingSessions.map((session) => (
-                <div key={session.id} className="group relative">
-                  <div className={`absolute -inset-0.5 ${session.status === 'past' ? 'bg-gradient-to-r from-gray-500 to-gray-800' : 'bg-gradient-to-r from-neon-cyan to-neon-magenta'} rounded-xl opacity-75 group-hover:opacity-100 transition duration-300`}></div>
-                  <div className="flex h-full">
-                    <div className="w-1/4 relative overflow-hidden rounded-l-xl">
-                      <Image
-                        src={session.image}
-                        alt={session.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className={`relative flex-1 ${session.status === 'past' ? 'bg-zinc-900/70' : 'bg-zinc-800/90'} backdrop-blur-sm rounded-r-xl p-4 shadow-xl hover:shadow-neon-cyan/20`}>
-                      <div className="absolute top-0 right-0 mt-4 mr-4 flex items-center gap-3">
-                        {session.status === 'past' && (
-                          <div className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm font-medium">
-                            Evento Pasado
-                          </div>
-                        )}
-                        <ShareButton
-                          title={session.title}
-                          date={session.date}
-                          time={session.time}
-                          location={session.location}
-                        />
-                      </div>
-                      <div className="absolute top-0 left-0 mt-4 ml-4">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-neon-pink/20 to-neon-cyan/20 flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-neon-pink/30 group-hover:to-neon-cyan/30 transition-all duration-300">
-                          <Music4 className="w-4 h-4 text-white group-hover:text-neon-cyan transform group-hover:scale-110 transition-transform" />
-                        </div>
-                      </div>
-                      <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-white via-white to-neon-cyan bg-clip-text text-transparent mt-12">
-                        {session.title}
-                      </h3>
-                      <div className="space-y-2 mb-4">
-                        <p className="text-white/90 flex items-center gap-2 text-base hover:text-neon-cyan transition-colors">
-                          <Calendar className="w-4 h-4" />
-                          <span className="opacity-90 hover:opacity-100 transition-opacity">
-                            {session.date} • {session.time}
-                          </span>
-                        </p>
-                        <p className="text-white/90 flex items-center gap-2 text-base hover:text-neon-pink transition-colors">
-                          <MapPin className="w-4 h-4" />
-                          <span className="opacity-90 hover:opacity-100 transition-opacity">
-                            {session.location}
-                          </span>
-                        </p>
-                      </div>
-                      <p className="text-white/80 text-sm leading-relaxed hover:text-white/90 transition-colors">
-                        {session.description}
-                      </p>
-                    </div>
+                <div key={session.id} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group hover:-translate-y-1 hover:shadow-lg hover:shadow-neon-cyan/20">
+                  <div className="relative mb-4 w-8 h-8 rounded-full bg-neon-cyan/10 flex items-center justify-center group-hover:bg-neon-cyan/20 transition-colors duration-500">
+                    <Calendar className="w-4 h-4 text-neon-cyan group-hover:scale-110 transition-transform duration-500" />
                   </div>
+
+                  <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
+                    <Image
+                      src={session.image}
+                      alt={session.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-neon-cyan transition-colors">
+                    {session.title}
+                  </h3>
+
+                  <div className="space-y-1 mb-2 text-sm">
+                    <p className="text-white/90 flex items-center gap-1.5 hover:text-neon-cyan transition-colors">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span className="opacity-90 hover:opacity-100 transition-opacity">
+                        {session.date} • {session.time}
+                      </span>
+                    </p>
+                    <p className="text-white/90 flex items-center gap-1.5 hover:text-neon-pink transition-colors">
+                      <MapPin className="w-3.5 h-3.5" />
+                      <span className="opacity-90 hover:opacity-100 transition-opacity">
+                        {session.address} • Rcia
+                      </span>
+                    </p>
+                  </div>
+
+                  <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors line-clamp-2">
+                    {session.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -378,6 +365,12 @@ export default function Home() {
             </a>
 
             <div className="flex items-center gap-4">
+              <ShareButton
+                title="Chill & Groove Sessions"
+                date="Marzo y Abril 2024"
+                time="Diferentes horarios"
+                location="Resistencia, Chaco"
+              />
               <a href="https://www.youtube.com/@djdiegonelson" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-neon-pink transition-colors transform hover:scale-110">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
