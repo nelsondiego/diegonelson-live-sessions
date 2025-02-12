@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Music4, MapPin, Calendar, Radio, Headphones, Clock, Sparkles, X } from "lucide-react";
+import { Music4, MapPin, Calendar, Headphones, Clock, Sparkles } from "lucide-react";
 import ShareButton from "./components/ShareButton";
 import AnimatedBackground from "./components/AnimatedBackground";
 import UpcomingDates from "./components/UpcomingDates";
