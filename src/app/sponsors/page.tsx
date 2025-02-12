@@ -2,8 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, Globe, Sparkles, Star, Zap, Home } from "lucide-react";
+import { Mail, Phone, Globe, Sparkles, Star, Zap, Home, MessageCircle, Clock, CheckCircle2 } from "lucide-react";
 import AnimatedBackground from "../components/AnimatedBackground";
+
+type VenueStatus = "en comunicacion" | "preconfirmado" | "confirmado";
+
+interface Venue {
+  name: string;
+  status: VenueStatus;
+}
 
 const plans = [
   {
@@ -55,6 +62,33 @@ const benefits = [
     title: "Prestigio",
     description: "Refuerza tu imagen como una empresa que apoya la cultura y el entretenimiento local."
   }
+];
+
+const venues: Venue[] = [
+  {
+    name: "Conejo Negro",
+    status: "preconfirmado",
+  },
+  {
+    name: "Clover",
+    status: "preconfirmado",
+  },
+  {
+    name: "La Barra",
+    status: "preconfirmado",
+  },
+  {
+    name: "La Biela",
+    status: "en comunicacion",
+  },
+  {
+    name: "Utopia",
+    status: "en comunicacion",
+  },
+  {
+    name: "Queen Pizza",
+    status: "en comunicacion",
+  },
 ];
 
 export default function SponsorsPage() {
@@ -127,6 +161,51 @@ export default function SponsorsPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Venues Section */}
+      <section className="py-24 px-4 md:px-8 relative">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta">
+            Locaciones
+          </h2>
+          <p className="text-center text-white/70 mb-12">
+            Lista de bares y restaurantes participantes. Esta lista se irá actualizando conforme se confirmen nuevas locaciones.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {venues.map((venue, index) => (
+              <div 
+                key={index}
+                className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
+                    {venue.name}
+                  </h3>
+                  {venue.status === "preconfirmado" && (
+                    <Clock className="w-5 h-5 text-emerald-300" />
+                  )}
+                  {venue.status === "confirmado" && (
+                    <CheckCircle2 className="w-5 h-5 text-blue-300" />
+                  )}
+                  {venue.status === "en comunicacion" && (
+                    <MessageCircle className="w-5 h-5 text-amber-300" />
+                  )}
+                </div>
+                <span className={`text-sm px-3 py-1 rounded-full ${
+                  venue.status === "preconfirmado" 
+                    ? "bg-emerald-500/20 text-emerald-300"
+                    : venue.status === "confirmado"
+                    ? "bg-blue-500/20 text-blue-300"
+                    : "bg-amber-500/20 text-amber-300"
+                }`}>
+                  {venue.status}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
