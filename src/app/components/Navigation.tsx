@@ -1,12 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Radio, Calendar, Sparkles, X } from "lucide-react";
 import ShareButton from "./ShareButton";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  if (pathname !== '/') return null;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/50 backdrop-blur-sm border-b border-white/10 px-6 py-4">

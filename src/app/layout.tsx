@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Pacifico } from "next/font/google";
 import "./globals.css";
+import Navigation from "./components/Navigation";
+import AnimatedBackground from "./components/AnimatedBackground";
 
 const pacifico = Pacifico({
   weight: ['400'],
@@ -102,7 +104,11 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}>
-        {children}
+        <div className="min-h-screen bg-slate-950 overflow-x-hidden">
+          <AnimatedBackground />
+          <Navigation />
+          {children}
+        </div>
       </body>
     </html>
   );
