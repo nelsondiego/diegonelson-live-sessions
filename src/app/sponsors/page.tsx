@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, Globe, Sparkles, Star, Zap, Home, MessageCircle, Clock, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, Globe, Sparkles, Star, Zap, Home, MessageCircle, Clock, CheckCircle2, Image as ImageIcon, Share2, Newspaper, Radio, Flag } from "lucide-react";
 import AnimatedBackground from "../components/AnimatedBackground";
 
 type VenueStatus = "en comunicacion" | "preconfirmado" | "confirmado";
@@ -10,6 +10,11 @@ type VenueStatus = "en comunicacion" | "preconfirmado" | "confirmado";
 interface Venue {
   name: string;
   status: VenueStatus;
+}
+
+interface Feature {
+  text: string;
+  icon: any;
 }
 
 const plans = [
@@ -20,7 +25,10 @@ const plans = [
     icon: Globe,
     color: "neon-cyan",
     features: [
-      "Logotipo y mención de tu marca en la página web oficial: diegonelson.com",
+      {
+        text: "Logotipo y mención de tu marca en la página web oficial: diegonelson.com",
+        icon: ImageIcon
+      }
     ]
   },
   {
@@ -30,9 +38,18 @@ const plans = [
     icon: Star,
     color: "neon-pink",
     features: [
-      "Todo lo del plan básico",
-      "Publicidad en redes sociales",
-      "Inclusión de tu marca en la folletería del evento"
+      {
+        text: "Todo lo del plan básico",
+        icon: CheckCircle2
+      },
+      {
+        text: "Publicidad en redes sociales",
+        icon: Share2
+      },
+      {
+        text: "Inclusión de tu marca en la folletería del evento",
+        icon: Newspaper
+      }
     ]
   },
   {
@@ -42,9 +59,18 @@ const plans = [
     icon: Zap,
     color: "neon-magenta",
     features: [
-      "Todo lo de los planes anteriores",
-      "Presencia en Radio La Rcka (segmento publicitario)",
-      "Espacio para banner o banderín de tu marca en los eventos"
+      {
+        text: "Todo lo de los planes anteriores",
+        icon: CheckCircle2
+      },
+      {
+        text: "Presencia en Radio La Rcka (segmento publicitario)",
+        icon: Radio
+      },
+      {
+        text: "Espacio para banner o banderín de tu marca en los eventos",
+        icon: Flag
+      }
     ]
   }
 ];
@@ -237,12 +263,15 @@ export default function SponsorsPage() {
                   </div>
 
                   <ul className="space-y-3">
-                    {plan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2 text-white/70 group-hover:text-white/90 transition-colors">
-                        <Sparkles className="w-5 h-5 text-neon-cyan shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
+                    {plan.features.map((feature, index) => {
+                      const FeatureIcon = feature.icon;
+                      return (
+                        <li key={index} className="flex items-start gap-2 text-white/70 group-hover:text-white/90 transition-colors">
+                          <FeatureIcon className="w-5 h-5 text-neon-cyan shrink-0 mt-0.5" />
+                          <span className="text-sm">{feature.text}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               );
