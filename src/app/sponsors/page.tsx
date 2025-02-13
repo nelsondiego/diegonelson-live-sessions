@@ -159,7 +159,7 @@ export default function SponsorsPage() {
         className="fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full transition-all duration-300 border border-white/10 hover:border-neon-cyan/30 hover:-translate-y-0.5"
       >
         <Home className="w-4 h-4" />
-        <span className="text-sm">Inicio</span>
+        <span className="text-sm font-medium">Ver detalles del evento</span>
       </Link>
 
       {/* Hero Section */}
