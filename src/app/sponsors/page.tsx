@@ -98,7 +98,7 @@ const venues: Venue[] = [
   {
     name: "La Barra",
     status: "confirmado",
-    address: "Güemes 1020"
+    address: "Güemes 345"
   },
   {
     name: "Brews",
@@ -123,12 +123,12 @@ const venues: Venue[] = [
   {
     name: "Utopia",
     status: "en comunicacion",
-    address: "Av. Alberdi 450"
+    address: "Av. Sarmiento 1991"
   },
   {
     name: "Queen Pizza",
     status: "en comunicacion",
-    address: "Av. 9 de Julio 1500"
+    address: "Pellegrini 654"
   },
 ];
 
