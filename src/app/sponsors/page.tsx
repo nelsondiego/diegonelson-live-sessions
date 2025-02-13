@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, Globe, Star, Zap, Home, MessageCircle, Clock, CheckCircle2, Image as ImageIcon, Share2, Newspaper, Radio, Flag } from "lucide-react";
+import { Mail, Phone, Globe, Star, Zap, Home, MessageCircle, Clock, CheckCircle2, Image as ImageIcon, Share2, Newspaper, Radio, Flag, MapPin } from "lucide-react";
 import AnimatedBackground from "../components/AnimatedBackground";
 
 type VenueStatus = "en comunicacion" | "preconfirmado" | "confirmado";
@@ -228,9 +228,19 @@ export default function SponsorsPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta">
             Locaciones
           </h2>
-          <p className="text-center text-white/70 mb-12">
-            Lista de bares y restaurantes participantes. Esta lista se irá actualizando conforme se confirmen nuevas locaciones.
+          <p className="text-center text-white/70 mb-4">
+            Lista de bares y restaurantes participantes en Resistencia. Esta lista se irá actualizando conforme se confirmen nuevas locaciones.
           </p>
+          <div className="max-w-2xl mx-auto mb-8 bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-neon-magenta/30 hover:border-neon-pink/50 transition-all duration-300 p-4 group hover:shadow-2xl hover:shadow-purple-500/30 relative before:absolute before:inset-0 before:rounded-xl before:transition-opacity before:opacity-0 hover:before:opacity-100 before:bg-gradient-radial before:from-purple-500/20 before:to-pink-500/5 before:-z-10">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-neon-magenta/10 flex items-center justify-center group-hover:bg-neon-magenta/20 transition-colors duration-500">
+                <MapPin className="w-5 h-5 text-neon-magenta group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <p className="text-base text-white/90 italic">
+                ¡Próximamente segunda edición en Corrientes Capital!
+              </p>
+            </div>
+          </div>
 
           <div className="space-y-12">
             {/* Confirmados */}
@@ -242,7 +252,7 @@ export default function SponsorsPage() {
                   .map((venue, index) => (
                     <div 
                       key={index}
-                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden"
+                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden hover:shadow-2xl hover:shadow-cyan-500/30 relative before:absolute before:inset-0 before:rounded-xl before:transition-opacity before:opacity-0 hover:before:opacity-100 before:bg-gradient-radial before:from-cyan-500/20 before:to-blue-500/5 before:-z-10"
                     >
                       <div className="flex">
                         <div className="relative w-1/4 aspect-square">
@@ -280,7 +290,7 @@ export default function SponsorsPage() {
                   .map((venue, index) => (
                     <div 
                       key={index}
-                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden"
+                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden hover:shadow-2xl hover:shadow-emerald-500/30 relative before:absolute before:inset-0 before:rounded-xl before:transition-opacity before:opacity-0 hover:before:opacity-100 before:bg-gradient-radial before:from-emerald-500/20 before:to-green-500/5 before:-z-10"
                     >
                       <div className="flex">
                         <div className="relative w-1/4 aspect-square">
@@ -318,7 +328,7 @@ export default function SponsorsPage() {
                   .map((venue, index) => (
                     <div 
                       key={index}
-                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden"
+                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden hover:shadow-2xl hover:shadow-amber-500/30 relative before:absolute before:inset-0 before:rounded-xl before:transition-opacity before:opacity-0 hover:before:opacity-100 before:bg-gradient-radial before:from-amber-500/20 before:to-orange-500/5 before:-z-10"
                     >
                       <div className="flex">
                         <div className="relative w-1/4 aspect-square">
@@ -353,9 +363,14 @@ export default function SponsorsPage() {
       {/* Plans Section */}
       <section className="py-24 px-4 md:px-8 relative">
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta animate-pulse">
-            Planes de patrocinio diseñados para cada necesidad
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta animate-pulse mb-4">
+              Planes de patrocinio diseñados para cada necesidad
+            </h2>
+            <p className="text-white/60 text-lg">
+              Aprovecha la oportunidad de participar en ambas ediciones: Resistencia y Corrientes Capital
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {plans.map((plan) => {
@@ -455,4 +470,4 @@ export default function SponsorsPage() {
       </footer>
     </>
   );
-} 
+}
