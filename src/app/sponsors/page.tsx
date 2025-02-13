@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, Globe, Star, Zap, Home, MessageCircle, Clock, CheckCircle2, Image as ImageIcon, Share2, Newspaper, Radio, Flag } from "lucide-react";
@@ -10,6 +8,7 @@ type VenueStatus = "en comunicacion" | "preconfirmado" | "confirmado";
 interface Venue {
   name: string;
   status: VenueStatus;
+  address: string;
 }
 
 const plans = [
@@ -89,26 +88,47 @@ const venues: Venue[] = [
   {
     name: "Conejo Negro",
     status: "preconfirmado",
+    address: "Liniers 22"
   },
   {
     name: "Clover",
-    status: "preconfirmado",
+    status: "confirmado",
+    address: "Ayacucho 285"
   },
   {
     name: "La Barra",
-    status: "preconfirmado",
+    status: "confirmado",
+    address: "Güemes 1020"
   },
   {
-    name: "La Biela",
+    name: "Brews",
+    status: "confirmado",
+    address: "Av. Paraguay 24"
+  },
+  {
+    name: "Green Bar",
+    status: "confirmado",
+    address: "Av. Avalos 526" 
+  },
+  {
+    name: "Patagonia",
     status: "en comunicacion",
+    address: "Av. Sarmiento 544"
+  },
+  {
+    name: "Chalé",
+    status: "en comunicacion",
+    address: "Av. Sarmiento 350"
   },
   {
     name: "Utopia",
     status: "en comunicacion",
+    address: "Av. Alberdi 450"
   },
   {
     name: "Queen Pizza",
     status: "en comunicacion",
+    address: "Av. 9 de Julio 1500"
   },
 ];
 
@@ -196,37 +216,90 @@ export default function SponsorsPage() {
             Lista de bares y restaurantes participantes. Esta lista se irá actualizando conforme se confirmen nuevas locaciones.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {venues.map((venue, index) => (
-              <div 
-                key={index}
-                className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
-                    {venue.name}
-                  </h3>
-                  {venue.status === "preconfirmado" && (
-                    <Clock className="w-5 h-5 text-emerald-300" />
-                  )}
-                  {venue.status === "confirmado" && (
-                    <CheckCircle2 className="w-5 h-5 text-blue-300" />
-                  )}
-                  {venue.status === "en comunicacion" && (
-                    <MessageCircle className="w-5 h-5 text-amber-300" />
-                  )}
-                </div>
-                <span className={`text-sm px-3 py-1 rounded-full ${
-                  venue.status === "preconfirmado" 
-                    ? "bg-emerald-500/20 text-emerald-300"
-                    : venue.status === "confirmado"
-                    ? "bg-blue-500/20 text-blue-300"
-                    : "bg-amber-500/20 text-amber-300"
-                }`}>
-                  {venue.status}
-                </span>
+          <div className="space-y-12">
+            {/* Confirmados */}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-blue-300">Confirmados</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {venues
+                  .filter(venue => venue.status === "confirmado")
+                  .map((venue, index) => (
+                    <div 
+                      key={index}
+                      className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
+                            {venue.name}
+                          </h3>
+                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                        </div>
+                        <CheckCircle2 className="w-5 h-5 text-blue-300" />
+                      </div>
+                      <span className="text-sm px-3 py-1 rounded-full bg-blue-500/20 text-blue-300">
+                        {venue.status}
+                      </span>
+                    </div>
+                  ))}
               </div>
-            ))}
+            </div>
+
+            {/* Preconfirmados */}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-emerald-300">Preconfirmados</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {venues
+                  .filter(venue => venue.status === "preconfirmado")
+                  .map((venue, index) => (
+                    <div 
+                      key={index}
+                      className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
+                            {venue.name}
+                          </h3>
+                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                        </div>
+                        <Clock className="w-5 h-5 text-emerald-300" />
+                      </div>
+                      <span className="text-sm px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300">
+                        {venue.status}
+                      </span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+
+            {/* En comunicación */}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-amber-300">En comunicación</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {venues
+                  .filter(venue => venue.status === "en comunicacion")
+                  .map((venue, index) => (
+                    <div 
+                      key={index}
+                      className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
+                            {venue.name}
+                          </h3>
+                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                        </div>
+                        <MessageCircle className="w-5 h-5 text-amber-300" />
+                      </div>
+                      <span className="text-sm px-3 py-1 rounded-full bg-amber-500/20 text-amber-300">
+                        {venue.status}
+                      </span>
+                    </div>
+                  ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
