@@ -5,61 +5,61 @@ import AnimatedBackground from "./components/AnimatedBackground";
 import UpcomingDates from "./components/UpcomingDates";
 import { Session, Sponsor } from "./types";
 const upcomingSessions: Session[] = [
-  // {
-  //   id: 1,
-  //   title: "Clover",
-  //   date: "Vie, 15 Mar",
-  //   time: "20:00 - 01:00",
-  //   location: "Clover",
-  //   address: "Ayacucho 285",
-  //   description: "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
-  //   status: "upcoming",
-  //   image: "/places/clover.webp"
-  // },
-  // {
-  //   id: 2,
-  //   title: "Conejo Negro",
-  //   date: "Sab, 30 Mar",
-  //   time: "21:00 - 02:00",
-  //   location: "Conejo Negro",
-  //   address: "Liniers 22",
-  //   description: "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
-  //   status: "upcoming",
-  //   image: "/places/conejonegro.webp"
-  // },
-  // {
-  //   id: 3,
-  //   title: "El Jardín Secreto",
-  //   date: "Vie, 12 Abr",
-  //   time: "19:00 - 00:00",
-  //   location: "Garden Lounge",
-  //   address: "Av. Wilde 185",
-  //   description: "Descubre un oasis urbano donde la naturaleza y los ritmos electrónicos crean una experiencia inolvidable",
-  //   status: "upcoming",
-  //   image: "/utopia.webp"
-  // },
-  // {
-  //   id: 4,
-  //   title: "Vista Marina",
-  //   date: "Sab, 27 Abr",
-  //   time: "18:00 - 23:00",
-  //   location: "Seafood Restaurant & Bar",
-  //   address: "Costanera Norte 1200",
-  //   description: "Cierra nuestra temporada con un sunset session frente al mar y la mejor selección musical",
-  //   status: "upcoming",
-  //   image: "/utopia.webp"
-  // },
-  // {
-  //   id: 5,
-  //   title: "Noche Bohemia",
-  //   date: "Vie, 16 Feb",
-  //   time: "20:00 - 01:00",
-  //   location: "Café Cultural",
-  //   address: "Güemes 565",
-  //   description: "Una noche inolvidable de música electrónica fusionada con elementos acústicos en un ambiente íntimo y acogedor",
-  //   status: "past",
-  //   image: "/utopia.webp"
-  // },
+  {
+    id: 1,
+    title: "Clover",
+    date: "A confirmar",
+    time: "",
+    location: "Clover",
+    address: "Ayacucho 285",
+    description: "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
+    status: "upcoming",
+    image: "/places/clover.webp"
+  },
+  {
+    id: 2,
+    title: "Conejo Negro",
+    date: "A confirmar",
+    time: "",
+    location: "Conejo Negro",
+    address: "Liniers 22",
+    description: "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
+    status: "upcoming",
+    image: "/places/conejonegro.webp"
+  },
+  {
+    id: 3,
+    title: "La Barra",
+    date: "A confirmar",
+    time: "",
+    location: "La Barra",
+    address: "Güemes 345",
+    description: "Descubre un oasis urbano donde la naturaleza y los ritmos electrónicos crean una experiencia inolvidable",
+    status: "upcoming",
+    image: "/places/labarra.webp"
+  },
+  {
+    id: 4,
+    title: "Brews",
+    date: "A confirmar",
+    time: "",
+    location: "Brews",
+    address: "Av. Paraguay 24",
+    description: "Cierra nuestra temporada con un sunset session frente al mar y la mejor selección musical",
+    status: "upcoming",
+    image: "/places/brews.webp"
+  },
+  {
+    id: 5,
+    title: "Green Bar",
+    date: "A confirmar",
+    time: "",
+    location: "Green Bar",
+    address: "Av. Avalos 526",
+    description: "Una noche inolvidable de música electrónica fusionada con elementos acústicos en un ambiente íntimo y acogedor",
+    status: "upcoming",
+    image: "/places/greenbar.webp"
+  },
   // {
   //   id: 6,
   //   title: "Sunset Lounge",

@@ -9,6 +9,7 @@ interface Venue {
   name: string;
   status: VenueStatus;
   address: string;
+  image: string;
 }
 
 const plans = [
@@ -88,47 +89,62 @@ const venues: Venue[] = [
   {
     name: "Conejo Negro",
     status: "preconfirmado",
-    address: "Liniers 22"
+    address: "Liniers 22",
+    image: "/places/conejonegro.webp"
   },
   {
     name: "Clover",
     status: "confirmado",
-    address: "Ayacucho 285"
+    address: "Ayacucho 285",
+    image: "/places/clover.webp"
   },
   {
     name: "La Barra",
     status: "confirmado",
-    address: "Güemes 345"
+    address: "Güemes 345",
+    image: "/places/labarra.webp"
   },
   {
     name: "Brews",
     status: "confirmado",
-    address: "Av. Paraguay 24"
+    address: "Av. Paraguay 24",
+    image: "/places/brews.webp"
   },
   {
     name: "Green Bar",
     status: "confirmado",
-    address: "Av. Avalos 526" 
+    address: "Av. Avalos 526",
+    image: "/places/greenbar.webp"
   },
   {
     name: "Patagonia",
     status: "en comunicacion",
-    address: "Av. Sarmiento 544"
+    address: "Av. Sarmiento 544",
+    image: "/places/patagonia.webp"
   },
   {
     name: "Chalé",
     status: "en comunicacion",
-    address: "Av. Sarmiento 350"
+    address: "Av. Sarmiento 350",
+    image: "/places/chale.webp"
   },
   {
     name: "Utopia",
     status: "en comunicacion",
-    address: "Av. Sarmiento 1991"
+    address: "Av. Sarmiento 1991",
+    image: "/places/utopia.webp"
+  },
+  {
+    name: "Nebraska",
+    status: "en comunicacion",
+    address: "Av. Laprida 88,",
+    image: "/places/nebraska.webp"
   },
   {
     name: "Queen Pizza",
     status: "en comunicacion",
-    address: "Pellegrini 654"
+    address: "Pellegrini 654",
+    image: "/places/queen-pizza.webp"
   },
 ];
 
@@ -226,20 +242,30 @@ export default function SponsorsPage() {
                   .map((venue, index) => (
                     <div 
                       key={index}
-                      className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group"
+                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden"
                     >
-                      <div className="flex items-center justify-between mb-2">
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
-                            {venue.name}
-                          </h3>
-                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                      <div className="flex">
+                        <div className="relative w-1/4 aspect-square">
+                          <Image
+                            src={venue.image}
+                            alt={venue.name}
+                            fill
+                            className="object-cover"
+                          />
                         </div>
-                        <CheckCircle2 className="w-5 h-5 text-blue-300" />
+                        <div className="flex-1 px-6 py-3">
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
+                              {venue.name}
+                            </h3>
+                            <CheckCircle2 className="w-5 h-5 text-blue-300" />
+                          </div>
+                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                          <span className="text-sm px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 mt-3 inline-block">
+                            {venue.status}
+                          </span>
+                        </div>
                       </div>
-                      <span className="text-sm px-3 py-1 rounded-full bg-blue-500/20 text-blue-300">
-                        {venue.status}
-                      </span>
                     </div>
                   ))}
               </div>
@@ -254,20 +280,30 @@ export default function SponsorsPage() {
                   .map((venue, index) => (
                     <div 
                       key={index}
-                      className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group"
+                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden"
                     >
-                      <div className="flex items-center justify-between mb-2">
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
-                            {venue.name}
-                          </h3>
-                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                      <div className="flex">
+                        <div className="relative w-1/4 aspect-square">
+                          <Image
+                            src={venue.image}
+                            alt={venue.name}
+                            fill
+                            className="object-cover"
+                          />
                         </div>
-                        <Clock className="w-5 h-5 text-emerald-300" />
+                        <div className="flex-1 px-6 py-3">
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
+                              {venue.name}
+                            </h3>
+                            <Clock className="w-5 h-5 text-emerald-300" />
+                          </div>
+                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                          <span className="text-sm px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 mt-3 inline-block">
+                            {venue.status}
+                          </span>
+                        </div>
                       </div>
-                      <span className="text-sm px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300">
-                        {venue.status}
-                      </span>
                     </div>
                   ))}
               </div>
@@ -282,20 +318,30 @@ export default function SponsorsPage() {
                   .map((venue, index) => (
                     <div 
                       key={index}
-                      className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group"
+                      className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group overflow-hidden"
                     >
-                      <div className="flex items-center justify-between mb-2">
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
-                            {venue.name}
-                          </h3>
-                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                      <div className="flex">
+                        <div className="relative w-1/4 aspect-square">
+                          <Image
+                            src={venue.image}
+                            alt={venue.name}
+                            fill
+                            className="object-cover"
+                          />
                         </div>
-                        <MessageCircle className="w-5 h-5 text-amber-300" />
+                        <div className="flex-1 px-6 py-3">
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">
+                              {venue.name}
+                            </h3>
+                            <MessageCircle className="w-5 h-5 text-amber-300" />
+                          </div>
+                          <p className="text-sm text-white/50 mt-1">{venue.address}</p>
+                          <span className="text-sm px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 mt-3 inline-block">
+                            {venue.status}
+                          </span>
+                        </div>
                       </div>
-                      <span className="text-sm px-3 py-1 rounded-full bg-amber-500/20 text-amber-300">
-                        {venue.status}
-                      </span>
                     </div>
                   ))}
               </div>
