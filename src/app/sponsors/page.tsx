@@ -146,6 +146,12 @@ const venues: Venue[] = [
     address: "Pellegrini 654",
     image: "/places/queen-pizza.webp"
   },
+  {
+    name: "Tiempo",
+    status: "en comunicacion",
+    address: "Arbo y Blanco 268",
+    image: "/places/tiempo.webp"
+  },
 ];
 
 export default function SponsorsPage() {
