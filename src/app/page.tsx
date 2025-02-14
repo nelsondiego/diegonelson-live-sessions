@@ -1,10 +1,17 @@
 import Image from "next/image";
-import { Music4, MapPin, Calendar, Headphones, Clock, Sparkles } from "lucide-react";
+import {
+  Music4,
+  MapPin,
+  Calendar,
+  Headphones,
+  Clock,
+  Sparkles,
+} from "lucide-react";
 import ShareButton from "./components/ShareButton";
 import AnimatedBackground from "./components/AnimatedBackground";
 import UpcomingDates from "./components/UpcomingDates";
-import MixcloudPlayer from './components/MixcloudPlayer';
-import Separator from './components/Separator';
+import MixcloudPlayer from "./components/MixcloudPlayer";
+import Separator from "./components/Separator";
 import { Session, Sponsor } from "./types";
 const upcomingSessions: Session[] = [
   {
@@ -14,9 +21,10 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "Clover",
     address: "Ayacucho 285",
-    description: "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
+    description:
+      "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
     status: "upcoming",
-    image: "/places/clover.webp"
+    image: "/places/clover.webp",
   },
   {
     id: 2,
@@ -25,9 +33,10 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "Conejo Negro",
     address: "Liniers 22",
-    description: "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
+    description:
+      "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
     status: "upcoming",
-    image: "/places/conejonegro.webp"
+    image: "/places/conejonegro.webp",
   },
   {
     id: 3,
@@ -36,9 +45,10 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "La Barra",
     address: "Güemes 345",
-    description: "Descubre un oasis urbano donde la naturaleza y los ritmos electrónicos crean una experiencia inolvidable",
+    description:
+      "Descubre un oasis urbano donde la naturaleza y los ritmos electrónicos crean una experiencia inolvidable",
     status: "upcoming",
-    image: "/places/labarra.webp"
+    image: "/places/labarra.webp",
   },
   {
     id: 4,
@@ -47,9 +57,10 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "Brews",
     address: "Av. Paraguay 24",
-    description: "Cierra nuestra temporada con un sunset session frente al mar y la mejor selección musical",
+    description:
+      "Cierra nuestra temporada con un sunset session frente al mar y la mejor selección musical",
     status: "upcoming",
-    image: "/places/brews.webp"
+    image: "/places/brews.webp",
   },
   {
     id: 5,
@@ -58,9 +69,10 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "Green Bar",
     address: "Av. Avalos 526",
-    description: "Una noche inolvidable de música electrónica fusionada con elementos acústicos en un ambiente íntimo y acogedor",
+    description:
+      "Una noche inolvidable de música electrónica fusionada con elementos acústicos en un ambiente íntimo y acogedor",
     status: "upcoming",
-    image: "/places/greenbar.webp"
+    image: "/places/greenbar.webp",
   },
   // {
   //   id: 6,
@@ -86,21 +98,30 @@ const upcomingSessions: Session[] = [
   // }
 ];
 
-
 const sponsors: Sponsor[] = [
   {
     id: 1,
     name: "3 Lineas",
     logo: "/logos/3lineas.png",
     tier: "platinum",
-    active: true
+    active: true,
+    url: "https://3lineas.com",
   },
   {
     id: 2,
     name: "Rck FM",
     logo: "/logos/larcka.png",
     tier: "gold",
-    active: true
+    active: true,
+    url: "https://rckfm.com",
+  },
+  {
+    id: 3,
+    name: "Dame Un Turno",
+    logo: "/logos/dameunturno.png",
+    tier: "gold",
+    active: true,
+    url: "https://dameunturno.com",
   },
 ];
 
@@ -123,7 +144,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
           </div>
           <div className="relative z-10 container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">            
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
               <div className="flex-1 text-left lg:-mt-20">
                 <h1 className="text-5xl md:text-8xl font-bold text-white tracking-tight mb-8">
                   <span className="font-pacifico font-normal bg-gradient-to-r from-neon-pink via-white to-neon-cyan bg-clip-text text-transparent p-1">
@@ -139,7 +160,9 @@ export default function Home() {
                     Música • Amigos • Momentos
                   </p>
                   <p className="text-lg md:text-xl text-white/70">
-                    Una experiencia única donde la mejor música electrónica se fusiona con la gastronomía en los espacios más exclusivos de Resistencia
+                    Una experiencia única donde la mejor música electrónica se
+                    fusiona con la gastronomía en los espacios más exclusivos de
+                    Resistencia
                   </p>
                 </div>
 
@@ -173,7 +196,10 @@ export default function Home() {
         <Separator />
 
         {/* About the Event Section */}
-        <section id="about" className="py-24 px-4 md:px-8 relative overflow-hidden">
+        <section
+          id="about"
+          className="py-24 px-4 md:px-8 relative overflow-hidden"
+        >
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta animate-pulse">
@@ -181,10 +207,13 @@ export default function Home() {
               </h2>
               <div className="max-w-3xl mx-auto space-y-6 text-white/80">
                 <p className="text-xl leading-relaxed">
-                  Bienvenido a un concepto único donde la música electrónica cobra vida en los espacios más exclusivos de Resistencia.
+                  Bienvenido a un concepto único donde la música electrónica
+                  cobra vida en los espacios más exclusivos de Resistencia.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Durante marzo y abril, cada venue se transforma en un escenario perfecto donde los beats, la gastronomía y las buenas vibras se fusionan para crear momentos inolvidables.
+                  Durante marzo y abril, cada venue se transforma en un
+                  escenario perfecto donde los beats, la gastronomía y las
+                  buenas vibras se fusionan para crear momentos inolvidables.
                 </p>
               </div>
             </div>
@@ -198,7 +227,8 @@ export default function Home() {
                   Música Selecta
                 </h3>
                 <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
-                  Deep house, disco house y funky house cuidadosamente seleccionados para crear la atmósfera perfecta en cada sesión.
+                  Deep house, disco house y funky house cuidadosamente
+                  seleccionados para crear la atmósfera perfecta en cada sesión.
                 </p>
               </div>
 
@@ -210,7 +240,9 @@ export default function Home() {
                   Espacios Únicos
                 </h3>
                 <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
-                  Bares y restaurantes seleccionados por su ambiente exclusivo, donde cada rincón está pensado para vivir una experiencia especial.
+                  Bares y restaurantes seleccionados por su ambiente exclusivo,
+                  donde cada rincón está pensado para vivir una experiencia
+                  especial.
                 </p>
               </div>
 
@@ -222,38 +254,51 @@ export default function Home() {
                   Momentos Mágicos
                 </h3>
                 <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
-                  Cada sesión está diseñada para crear recuerdos inolvidables, donde amigos, música y gastronomía se encuentran en perfecta armonía.
+                  Cada sesión está diseñada para crear recuerdos inolvidables,
+                  donde amigos, música y gastronomía se encuentran en perfecta
+                  armonía.
                 </p>
               </div>
             </div>
 
             <div className="mt-16 text-center">
               <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                Únete a nosotros en esta experiencia única donde cada sesión es una oportunidad para disfrutar de los mejores momentos en los lugares más especiales de la ciudad.
+                Únete a nosotros en esta experiencia única donde cada sesión es
+                una oportunidad para disfrutar de los mejores momentos en los
+                lugares más especiales de la ciudad.
               </p>
             </div>
           </div>
         </section>
 
-        
         <Separator />
 
         {/* Upcoming Sessions */}
-        <section id="sessions" className="py-24 px-4 md:px-8 relative overflow-hidden">
+        <section
+          id="sessions"
+          className="py-24 px-4 md:px-8 relative overflow-hidden"
+        >
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta animate-pulse">
                 Próximas Sesiones
               </h2>
               <p className="text-xl text-white/80 max-w-2xl mx-auto">
-                Descubre nuestros próximos eventos y reserva tu lugar en una experiencia musical única. Cada sesión está cuidadosamente curada para ofrecer los mejores momentos de música electrónica en locaciones exclusivas.
+                Descubre nuestros próximos eventos y reserva tu lugar en una
+                experiencia musical única. Cada sesión está cuidadosamente
+                curada para ofrecer los mejores momentos de música electrónica
+                en locaciones exclusivas.
               </p>
             </div>
-            
-            {upcomingSessions.filter(session => session.status === 'upcoming').length > 0 ? (
+
+            {upcomingSessions.filter((session) => session.status === "upcoming")
+              .length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {upcomingSessions.map((session) => (
-                  <div key={session.id} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group hover:-translate-y-1 hover:shadow-lg hover:shadow-neon-cyan/20">
+                  <div
+                    key={session.id}
+                    className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 group hover:-translate-y-1 hover:shadow-lg hover:shadow-neon-cyan/20"
+                  >
                     <div className="relative mb-4 w-8 h-8 rounded-full bg-neon-cyan/10 flex items-center justify-center group-hover:bg-neon-cyan/20 transition-colors duration-500">
                       <Calendar className="w-4 h-4 text-neon-cyan group-hover:scale-110 transition-transform duration-500" />
                     </div>
@@ -314,16 +359,21 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
               {sponsors.map((sponsor) => (
-                <div key={sponsor.id} className="group relative p-4 rounded-lg transform hover:scale-110 transition-all duration-300 bg-slate-800/30">
-                  <div className="absolute inset-0 bg-gradient-to-r from-neon-pink/20 to-neon-cyan/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative aspect-square">
-                    <Image
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      fill
-                      className="object-contain filter brightness-75 group-hover:brightness-100 transition-all duration-300"
-                    />
+                <div  key={sponsor.id} className="flex flex-col justify-center gap-2">
+                  <div
+                    className="group w-full relative p-4 rounded-lg transform hover:scale-110 transition-all duration-300 bg-slate-800/30"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-neon-pink/20 to-neon-cyan/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative aspect-square">
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        fill
+                        className="object-contain filter brightness-75 group-hover:brightness-100 transition-all duration-300"
+                      />
+                    </div>
                   </div>
+                  <a href={sponsor.url ?? '#'} className="text-white/80 hover:underline" target="_blank">{sponsor.name}</a>
                 </div>
               ))}
             </div>
@@ -360,14 +410,32 @@ export default function Home() {
                   time="Diferentes horarios"
                   location="Resistencia, Chaco"
                 />
-                <a href="https://www.youtube.com/@djdiegonelson" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-neon-pink transition-colors transform hover:scale-110">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <a
+                  href="https://www.youtube.com/@djdiegonelson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 hover:text-neon-pink transition-colors transform hover:scale-110"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/diegonelson" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-neon-cyan transition-colors transform hover:scale-110">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.073 1.689.073-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <a
+                  href="https://www.instagram.com/diegonelson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 hover:text-neon-cyan transition-colors transform hover:scale-110"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.073 1.689.073-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </a>
               </div>
@@ -375,7 +443,8 @@ export default function Home() {
 
             <div className="mt-4 text-center">
               <p className="text-white/30 text-xs">
-                © {new Date().getFullYear()} Diego Nelson. Todos los derechos reservados.
+                © {new Date().getFullYear()} Diego Nelson. Todos los derechos
+                reservados.
               </p>
             </div>
           </div>

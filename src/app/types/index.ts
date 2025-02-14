@@ -24,4 +24,5 @@ export interface Sponsor {
   website?: string;
   tier: 'platinum' | 'gold' | 'silver' | 'bronze';
   active: boolean;
+  url?: string;
 }
