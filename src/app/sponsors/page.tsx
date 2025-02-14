@@ -472,7 +472,7 @@ export default function SponsorsPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 md:px-8 border-t border-white/10 bg-slate-900/50 backdrop-blur-sm">
+      <footer id="footer" className="py-8 px-4 md:px-8 border-t border-white/10 bg-slate-900/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">
           <div className="relative w-20 h-20 mx-auto mb-4">
             <Image
