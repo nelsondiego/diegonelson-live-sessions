@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Pacifico } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import AnimatedBackground from "./components/AnimatedBackground";
+import ScrollToTop from "./components/ScrollToTop";
 
 const pacifico = Pacifico({
   weight: ['400'],
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     'deep house Chaco',
     'disco house',
     'funky house',
-    'rooftop sessions',
+    'evening sessions',
     'bar sessions Chaco',
     'restaurantes con música electrónica',
     'eventos exclusivos Chaco',
@@ -109,6 +110,7 @@ export default function RootLayout({
           <AnimatedBackground />
           <Navigation />
           {children}
+          <ScrollToTop />
         </div>
       </body>
     </html>

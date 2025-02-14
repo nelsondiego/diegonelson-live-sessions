@@ -34,7 +34,7 @@ const upcomingSessions: Session[] = [
     location: "Conejo Negro",
     address: "Liniers 22",
     description:
-      "Una fusión única de gastronomía y música electrónica en el corazón histórico de la ciudad",
+      "Una fusión única de gastronomía y música electrónica en el corazón de la ciudad",
     status: "upcoming",
     image: "/places/conejonegro.webp",
   },
@@ -58,7 +58,7 @@ const upcomingSessions: Session[] = [
     location: "Brews",
     address: "Av. Paraguay 24",
     description:
-      "Cierra nuestra temporada con un sunset session frente al mar y la mejor selección musical",
+      "Disfruta de una noche única con la mejor selección musical en un ambiente exclusivo",
     status: "upcoming",
     image: "/places/brews.webp",
   },
@@ -81,7 +81,7 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "El Bosque",
     address: "Av Laprida 700",
-    description: "Celebramos el atardecer con los mejores beats y una vista panorámica de la ciudad que te dejará sin aliento",
+    description: "Celebramos el atardecer con los mejores beats en un ambiente relajado de food trucks que te hará vivir una experiencia única",
     status: "upcoming",
     image: "/places/elbosque.webp"
   },
@@ -109,7 +109,7 @@ const sponsors: Sponsor[] = [
   },
   {
     id: 2,
-    name: "Rck FM",
+    name: "La Rocka 89.5",
     logo: "/logos/larcka.png",
     tier: "gold",
     active: true,
@@ -374,7 +374,14 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <a href={sponsor.url ?? '#'} className="text-white/80 hover:underline" target="_blank">{sponsor.name}</a>
+                  <a 
+                    href={sponsor.url ?? '#'} 
+                    className="text-white/60 hover:text-white transition-colors text-sm font-medium tracking-wide hover:bg-gradient-to-r hover:from-neon-pink hover:to-neon-cyan hover:bg-clip-text hover:text-transparent" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {sponsor.name}
+                  </a>
                 </div>
               ))}
             </div>
