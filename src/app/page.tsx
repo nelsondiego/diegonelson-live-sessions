@@ -3,6 +3,8 @@ import { Music4, MapPin, Calendar, Headphones, Clock, Sparkles } from "lucide-re
 import ShareButton from "./components/ShareButton";
 import AnimatedBackground from "./components/AnimatedBackground";
 import UpcomingDates from "./components/UpcomingDates";
+import MixcloudPlayer from './components/MixcloudPlayer';
+import Separator from './components/Separator';
 import { Session, Sponsor } from "./types";
 const upcomingSessions: Session[] = [
   {
@@ -109,7 +111,7 @@ export default function Home() {
         <AnimatedBackground />
 
         {/* Hero Section */}
-        <div className="relative w-full min-h-screen flex items-center justify-center pt-32 mb-24">
+        <div className="relative w-full min-h-screen flex items-center justify-center pt-32 ">
           <div className="absolute inset-0 z-0">
             <Image
               src="/people-ambar.jpg"
@@ -158,19 +160,8 @@ export default function Home() {
               </div>
 
               <div className="flex-1 lg:-mt-20 w-full max-w-2xl mx-auto lg:max-w-none">
-                <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl shadow-neon-pink/20 border border-white/10">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta opacity-50 animate-pulse blur-md"></div>
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/nu1DWWjOwr0?si=9PQkPiqDugqMQ1Uw"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    className="absolute inset-0 bg-black"
-                  />
+                <div className="relative w-full  rounded-xl overflow-hidden shadow-2xl shadow-neon-pink/20 border border-white/10">
+                  <MixcloudPlayer />
                 </div>
               </div>
             </div>
@@ -178,6 +169,8 @@ export default function Home() {
 
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent z-10"></div>
         </div>
+
+        <Separator />
 
         {/* About the Event Section */}
         <section id="about" className="py-24 px-4 md:px-8 relative overflow-hidden">
@@ -242,10 +235,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Separator */}
-        <div className="w-full max-w-7xl mx-auto px-4 my-12">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        </div>
+        
+        <Separator />
 
         {/* Upcoming Sessions */}
         <section id="sessions" className="py-24 px-4 md:px-8 relative overflow-hidden">
