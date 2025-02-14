@@ -152,6 +152,12 @@ const venues: Venue[] = [
     address: "Arbo y Blanco 268",
     image: "/places/tiempo.webp"
   },
+  {
+    name: "El Bosque",
+    status: "confirmado",
+    address: "Av Laprida 700",
+    image: "/places/elbosque.webp"
+  },
 ];
 
 export default function SponsorsPage() {

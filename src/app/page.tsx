@@ -74,17 +74,17 @@ const upcomingSessions: Session[] = [
     status: "upcoming",
     image: "/places/greenbar.webp",
   },
-  // {
-  //   id: 6,
-  //   title: "Sunset Lounge",
-  //   date: "Sab, 24 Feb",
-  //   time: "18:00 - 23:00",
-  //   location: "Sky Bar",
-  //   address: "Juan B. Justo 1150, Piso 15",
-  //   description: "Celebramos el atardecer con los mejores beats y una vista panorámica de la ciudad que te dejará sin aliento",
-  //   status: "past",
-  //   image: "/utopia.webp"
-  // },
+  {
+    id: 6,
+    title: "El Bosque Food Park",
+    date: "A confirmar",
+    time: "",
+    location: "El Bosque",
+    address: "Av Laprida 700",
+    description: "Celebramos el atardecer con los mejores beats y una vista panorámica de la ciudad que te dejará sin aliento",
+    status: "upcoming",
+    image: "/places/elbosque.webp"
+  },
   // {
   //   id: 7,
   //   title: "Urban Beats",
@@ -123,6 +123,7 @@ const sponsors: Sponsor[] = [
     active: true,
     url: "https://dameunturno.com",
   },
+  
 ];
 
 export default function Home() {
