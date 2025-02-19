@@ -9,20 +9,19 @@ const UpcomingDates = () => {
         </div>
         
         <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-cyan transition-colors">
-          Próximamente
+          Reserva Tu Experiencia
         </h3>
         
         <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
-          Estamos preparando una serie de sesiones únicas para Marzo y Abril 2024. 
-          Música, amigos y los mejores lugares de Resistencia se fusionarán para crear momentos inolvidables.
+          ¡Prepárate para vivir noches inolvidables! Marzo y Abril 2024 serán testigos de 8 sesiones exclusivas que redefinirán las noches de Resistencia. Cupos limitados para garantizar una experiencia íntima y premium en cada venue.
         </p>
 
         <p className="mt-4 text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
-          Seguinos en redes sociales para ser el primero en enterarte de las fechas confirmadas
+          No te pierdas la oportunidad de ser parte de esta revolución musical. Sé el primero en asegurar tu lugar siguiéndonos en redes sociales.
         </p>
       </div>
     </div>
   );
 };
 
-export default UpcomingDates; 
+export default UpcomingDates;

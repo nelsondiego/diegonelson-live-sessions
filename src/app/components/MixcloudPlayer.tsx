@@ -10,11 +10,11 @@ const MixcloudPlayer = () => {
         </div>
         
         <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-cyan transition-colors">
-          Preview Mix
+          Anticipa la Experiencia Musical
         </h3>
         
         <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors mb-6">
-          Escuchá un adelanto del sonido que vas a encontrar en las Chill & Groove Sessions. Una selección de funk house y disco house que te va a hacer mover.
+          Déjate cautivar por el sonido exclusivo de las Chill & Groove Sessions. Sumérgete en una selección premium de funk house y disco house que transformará tus sentidos y te hará vibrar al ritmo de la mejor música electrónica.
         </p>
         <iframe 
           width="100%" 
