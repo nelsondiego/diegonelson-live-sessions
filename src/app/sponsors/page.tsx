@@ -215,10 +215,11 @@ export default function SponsorsPage() {
       {/* Hero Section */}
       <div className="relative w-full min-h-screen flex items-center justify-start pt-32">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div>
               <p className="text-neon-cyan mb-4 text-sm md:text-base font-medium tracking-wider uppercase flex items-center gap-2">
                 <span className="w-12 h-[1px] bg-neon-cyan inline-block"></span>
+                <Disc3 className="w-5 h-5 text-gray-300 animate-spin-slow" />
                 25 años con la música
               </p>
 
@@ -233,13 +234,12 @@ export default function SponsorsPage() {
 
               <div className="mb-12">
                 <p className="text-lg md:text-xl p-0 md:pr-40 text-white/80 leading-relaxed">
-                  Sé parte de <strong>Chill & Groove Sessions</strong>, el evento premium que
-                  está transformando la escena musical en Resistencia. Conecta
-                  tu marca con una audiencia exclusiva durante <strong>8 noches</strong>{' '}
-                  extraordinarias en los bares más prestigiosos de la ciudad.
+                  Sé parte de <strong>Chill & Groove Sessions</strong>, donde la
+                  música electrónica y las marcas premium convergen.{" "}
+                  <strong>8 noches</strong> exclusivas en los mejores bares de
+                  Resistencia.
                   <span className="block mt-2">
-                    Marzo y abril 2025: una revolución en el entretenimiento
-                    premium.
+                    Marzo-Abril 2025: La nueva era del entretenimiento.
                   </span>
                 </p>
               </div>
