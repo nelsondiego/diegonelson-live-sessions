@@ -258,7 +258,7 @@ export default function SponsorsPage() {
               </a>
             </div>
             <div className="relative h-[500px] w-full">
-              <div className="absolute -inset-4 bg-gradient-to-r from-neon-cyan/30 via-neon-pink/30 to-neon-cyan/30 blur-2xl rounded-xl"></div>
+              <div className="absolute -inset-5 bg-gradient-to-tr from-cyan-200 via-neon-pink/30 to-neon-cyan blur-3xl rounded-xl"></div>
               <Image
                 src="/people-tinted-left-2.webp"
                 alt="People enjoying music"
