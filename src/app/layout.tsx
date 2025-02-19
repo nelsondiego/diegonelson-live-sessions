@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Pacifico } from "next/font/google";
+import { Ubuntu, Pacifico } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import AnimatedBackground from "./components/AnimatedBackground";
@@ -12,14 +12,11 @@ const pacifico = Pacifico({
   display: 'swap',
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-ubuntu',
+  display: 'swap',
 });
 
 export const viewport: Viewport = {
@@ -105,7 +102,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}>
+      <body className={`${ubuntu.variable} ${pacifico.variable} antialiased`}>
         <div className="min-h-screen bg-slate-950 overflow-x-hidden">
           <AnimatedBackground />
           <Navigation />

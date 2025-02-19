@@ -249,7 +249,7 @@ export default function SponsorsPage() {
                 className="inline-flex items-center gap-2 px-12 py-3 text-white bg-neon-cyan/20 hover:bg-neon-cyan/30 backdrop-blur-sm rounded-2xl transition-all duration-300 border border-neon-cyan/50 hover:border-neon-cyan group"
               >
                 <Handshake className="w-5 h-5 text-neon-cyan group-hover:scale-110 transition-transform" />
-                <span className="font-medium">¡Quiero Auspiciar!</span>
+                <span className="font-medium text-lg">¡Quiero Auspiciar!</span>
               </a>
             </div>
             <div className="relative h-[500px] w-full">
@@ -276,7 +276,7 @@ export default function SponsorsPage() {
       {/* About Section */}
       <section id="about" className=" my-20 md:my-40">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-white via-neon-cyan to-white bg-clip-text text-transparent animate-gradient text-center mb-4">
+          <h2 className="text-5xl p-1 font-bold bg-gradient-to-r from-white via-neon-cyan to-white bg-clip-text text-transparent animate-gradient text-center mb-4">
             Sé Parte de Algo Único
           </h2>
           <p className="text-xl text-white/80 text-center max-w-3xl mx-auto mb-16">
@@ -460,7 +460,7 @@ export default function SponsorsPage() {
       <section className="my-20 md:my-40 px-4 md:px-8 relative">
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta animate-pulse mb-4">
+            <h2 className="text-3xl md:text-5xl p-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta animate-pulse mb-4">
               Planes de patrocinio diseñados para cada necesidad
             </h2>
             <p className="text-lg text-white/60">

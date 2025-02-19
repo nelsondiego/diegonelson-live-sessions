@@ -8,7 +8,7 @@
 }
 
 body {
-  @apply text-foreground antialiased;
+  @apply text-foreground antialiased font-sans;
 }
 
 /* Estilos para la barra de scroll */
