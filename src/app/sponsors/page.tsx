@@ -232,13 +232,13 @@ export default function SponsorsPage() {
               </h1>
 
               <div className="mb-12">
-                <p className="text-lg md:text-xl p-0 md:pr-24 text-white/80 leading-relaxed">
-                  Sé parte de Chill & Groove Sessions, el evento premium que
+                <p className="text-lg md:text-xl p-0 md:pr-40 text-white/80 leading-relaxed">
+                  Sé parte de <strong>Chill & Groove Sessions</strong>, el evento premium que
                   está transformando la escena musical en Resistencia. Conecta
-                  tu marca con una audiencia exclusiva durante 8 noches
+                  tu marca con una audiencia exclusiva durante <strong>8 noches</strong>{' '}
                   extraordinarias en los bares más prestigiosos de la ciudad.
                   <span className="block mt-2">
-                    Marzo y abril 2024: una revolución en el entretenimiento
+                    Marzo y abril 2025: una revolución en el entretenimiento
                     premium.
                   </span>
                 </p>
