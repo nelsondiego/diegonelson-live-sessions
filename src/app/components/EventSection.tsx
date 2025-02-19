@@ -25,7 +25,7 @@ const EventSection = () => {
         </div>
 
         <div className="w-full md:w-1/2 space-y-8">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-white via-neon-cyan to-white bg-clip-text text-transparent animate-gradient flex items-center gap-3">
+          <h2 className="md:text-4xl text-2xl font-bold bg-gradient-to-r from-white via-neon-cyan to-white bg-clip-text text-transparent animate-gradient flex items-center gap-3">
             <Music2 className="w-8 h-8 text-neon-cyan" />
             Chill & Groove Sessions
           </h2>

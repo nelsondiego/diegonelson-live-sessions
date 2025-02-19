@@ -281,7 +281,7 @@ export default function SponsorsPage() {
       {/* About Section */}
       <section id="about" className=" my-20 md:my-40">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl p-1 font-bold bg-gradient-to-r from-white via-neon-cyan to-white bg-clip-text text-transparent animate-gradient text-center mb-4">
+          <h2 className="md:text-5xl text-3xl p-1 font-bold bg-gradient-to-r from-white via-neon-cyan to-white bg-clip-text text-transparent animate-gradient text-center mb-4">
             Sé Parte de Algo Único
           </h2>
           <p className="text-xl text-white/80 text-center max-w-3xl mx-auto mb-16">
