@@ -15,7 +15,7 @@ const EventSection = () => {
           <div className="relative aspect-[4/3] w-full rounded-lg  group">
             <div className="absolute -inset-1 bg-gradient-to-r from-neon-cyan/50 via-neon-magenta/50 to-neon-cyan/50 rounded-lg blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-70"></div>
             <Image
-              src="/bar-vinyl.jpg"
+              src="/bar-vinyl.webp"
               alt="Chill & Groove Sessions ambiente"
               fill
               className="object-cover rounded-lg"

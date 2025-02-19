@@ -255,14 +255,14 @@ export default function SponsorsPage() {
             <div className="relative h-[500px] w-full">
               <div className="absolute -inset-4 bg-gradient-to-r from-neon-cyan/30 via-neon-pink/30 to-neon-cyan/30 blur-2xl rounded-xl"></div>
               <Image
-                src="/people-tinted-left.jpg"
+                src="/people-tinted-left.webp"
                 alt="People enjoying music"
                 fill
                 className="object-cover relative z-10 rounded-xl hidden md:block"
                 priority
               />
               <Image
-                src="/girl-look-up.jpg"
+                src="/girl-look-up.webp"
                 alt="People enjoying music"
                 fill
                 className="object-cover relative z-10 rounded-xl md:hidden block"
