@@ -246,7 +246,12 @@ export default function SponsorsPage() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-12 py-3 text-white bg-neon-cyan/20 hover:bg-neon-cyan/30 backdrop-blur-sm rounded-2xl transition-all duration-300 border border-neon-cyan/50 hover:border-neon-cyan group"
+                className="inline-flex items-center gap-2 px-12 py-3 text-white 
+                bg-neon-cyan/20 hover:bg-neon-cyan/30
+                backdrop-blur-sm rounded-2xl transition-all duration-500 
+                border border-neon-cyan/50 hover:border-neon-cyan
+                shadow-lg shadow-neon-cyan/20 hover:shadow-neon-cyan/40
+                group hover:scale-[1.02]"
               >
                 <Handshake className="w-5 h-5 text-neon-cyan group-hover:scale-110 transition-transform" />
                 <span className="font-medium text-lg">¡Quiero Auspiciar!</span>
@@ -255,14 +260,14 @@ export default function SponsorsPage() {
             <div className="relative h-[500px] w-full">
               <div className="absolute -inset-4 bg-gradient-to-r from-neon-cyan/30 via-neon-pink/30 to-neon-cyan/30 blur-2xl rounded-xl"></div>
               <Image
-                src="/people-tinted-left.webp"
+                src="/people-tinted-left-2.webp"
                 alt="People enjoying music"
                 fill
                 className="object-cover relative z-10 rounded-xl hidden md:block"
                 priority
               />
               <Image
-                src="/girl-look-up.webp"
+                src="/girl-look-up-2.webp"
                 alt="People enjoying music"
                 fill
                 className="object-cover relative z-10 rounded-xl md:hidden block"
