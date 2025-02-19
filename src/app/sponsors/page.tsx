@@ -20,11 +20,11 @@ import AnimatedBackground from "../components/AnimatedBackground";
 import EventSection from "../components/EventSection";
 import Separator from "../components/Separator";
 
-type VenueStatus = "en comunicacion" | "preconfirmado" | "confirmado";
+type BarStatus = "en comunicacion" | "preconfirmado" | "confirmado";
 
-interface Venue {
+interface Bar {
   name: string;
-  status: VenueStatus;
+  status: BarStatus;
   address: string;
   image: string;
 }
@@ -111,7 +111,7 @@ const benefits = [
   },
 ];
 
-const venues: Venue[] = [
+const bares: Bar[] = [
   {
     name: "Conejo Negro",
     status: "preconfirmado",
@@ -236,7 +236,7 @@ export default function SponsorsPage() {
                   Sé parte de Chill & Groove Sessions, el evento premium que
                   está transformando la escena musical en Resistencia. Conecta
                   tu marca con una audiencia exclusiva durante 8 noches
-                  extraordinarias en los venues más prestigiosos de la ciudad.
+                  extraordinarias en los bares más prestigiosos de la ciudad.
                   <span className="block mt-2">
                     Marzo y abril 2024: una revolución en el entretenimiento
                     premium.
@@ -313,7 +313,7 @@ export default function SponsorsPage() {
 
       <Separator />
 
-      {/* Venues Section */}
+      {/* Bares Section */}
       <section className="my-20 md:my-40 px-4 md:px-8 relative">
         <div className="container mx-auto relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-cyan to-neon-magenta">
@@ -331,8 +331,8 @@ export default function SponsorsPage() {
                 Confirmados
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {venues
-                  .filter((venue) => venue.status === "confirmado")
+                {bares
+                  .filter((bar) => bar.status === "confirmado")
                   .map((venue, index) => (
                     <div
                       key={index}
@@ -373,8 +373,8 @@ export default function SponsorsPage() {
                 Preconfirmados
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {venues
-                  .filter((venue) => venue.status === "preconfirmado")
+                {bares
+                  .filter((bar) => bar.status === "preconfirmado")
                   .map((venue, index) => (
                     <div
                       key={index}
@@ -415,8 +415,8 @@ export default function SponsorsPage() {
                 En comunicación
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {venues
-                  .filter((venue) => venue.status === "en comunicacion")
+                {bares
+                  .filter((bar) => bar.status === "en comunicacion")
                   .map((venue, index) => (
                     <div
                       key={index}

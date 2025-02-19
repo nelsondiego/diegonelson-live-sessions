@@ -21,8 +21,7 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "Clover",
     address: "Ayacucho 285",
-    description:
-      "Inaugura nuestra serie de eventos con una noche mágica bajo las estrellas y los mejores beats de house",
+    description: "Espacio exclusivo con ambiente premium y beats elegantes",
     status: "upcoming",
     image: "/places/clover.webp",
   },
@@ -33,8 +32,7 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "Conejo Negro",
     address: "Liniers 22",
-    description:
-      "Una fusión única de gastronomía y música electrónica en el corazón de la ciudad",
+    description: "Alta gastronomía y deep house en ambiente íntimo",
     status: "upcoming",
     image: "/places/conejonegro.webp",
   },
@@ -45,8 +43,7 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "La Barra",
     address: "Güemes 345",
-    description:
-      "Descubre un oasis urbano donde la naturaleza y los ritmos electrónicos crean una experiencia inolvidable",
+    description: "Oasis urbano con ritmos electrónicos y ambiente natural",
     status: "upcoming",
     image: "/places/labarra.webp",
   },
@@ -57,8 +54,7 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "Brews",
     address: "Av. Paraguay 24",
-    description:
-      "Disfruta de una noche única con la mejor selección musical en un ambiente exclusivo",
+    description: "Mixología artesanal y beats cautivadores en ambiente moderno",
     status: "upcoming",
     image: "/places/brews.webp",
   },
@@ -70,7 +66,7 @@ const upcomingSessions: Session[] = [
     location: "Green Bar",
     address: "Av. Avalos 526",
     description:
-      "Una noche inolvidable de música electrónica fusionada con elementos acústicos en un ambiente íntimo y acogedor",
+      "Fusión de electrónica y elementos acústicos en espacio exclusivo",
     status: "upcoming",
     image: "/places/greenbar.webp",
   },
@@ -81,21 +77,10 @@ const upcomingSessions: Session[] = [
     time: "",
     location: "El Bosque",
     address: "Av Laprida 700",
-    description: "Celebramos el atardecer con los mejores beats en un ambiente relajado de food trucks que te hará vivir una experiencia única",
+    description: "Sunset sessions con gastronomía gourmet y beats electrónicos",
     status: "upcoming",
-    image: "/places/elbosque.webp"
+    image: "/places/elbosque.webp",
   },
-  // {
-  //   id: 7,
-  //   title: "Urban Beats",
-  //   date: "Vie, 1 Mar",
-  //   time: "21:00 - 02:00",
-  //   location: "The Factory Club",
-  //   address: "Av. Paraguay 750",
-  //   description: "Una explosión de ritmos urbanos y electrónicos en el espacio industrial más cool de la ciudad",
-  //   status: "past",
-  //   image: "/utopia.webp"
-  // }
 ];
 
 const sponsors: Sponsor[] = [
@@ -123,7 +108,6 @@ const sponsors: Sponsor[] = [
     active: true,
     url: "https://dameunturno.com",
   },
-  
 ];
 
 export default function Home() {
@@ -158,12 +142,13 @@ export default function Home() {
 
                 <div className="max-w-xl mb-12">
                   <p className="text-xl md:text-3xl text-white/90 font-medium mb-4">
-                    Música • Amigos • Momentos
+                    Música • Experiencias • Conexiones
                   </p>
                   <p className="text-lg md:text-xl text-white/70">
-                    Una experiencia única donde la mejor música electrónica se
-                    fusiona con la gastronomía en los espacios más exclusivos de
-                    Resistencia
+                    Descubre una experiencia sensorial única donde la música
+                    electrónica premium se fusiona con la alta gastronomía
+                    durante 8 noches exclusivas en 8 de los espacios más
+                    prestigiosos de Resistencia
                   </p>
                 </div>
 
@@ -208,13 +193,14 @@ export default function Home() {
               </h2>
               <div className="max-w-3xl mx-auto space-y-6 text-white/80">
                 <p className="text-xl leading-relaxed">
-                  Bienvenido a un concepto único donde la música electrónica
-                  cobra vida en los espacios más exclusivos de Resistencia.
+                  Bienvenido a una revolución nocturna donde la música
+                  electrónica cobra vida en los espacios más sofisticados de
+                  Resistencia.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Durante marzo y abril, cada venue se transforma en un
-                  escenario perfecto donde los beats, la gastronomía y las
-                  buenas vibras se fusionan para crear momentos inolvidables.
+                  Durante marzo y abril, cada bar se transforma en un escenario
+                  perfecto donde los beats, la gastronomía y las buenas vibras
+                  se fusionan para crear momentos inolvidables.
                 </p>
               </div>
             </div>
@@ -225,11 +211,12 @@ export default function Home() {
                   <Headphones className="w-6 h-6 text-neon-pink group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-pink transition-colors">
-                  Música Selecta
+                  Experiencia Musical Elite
                 </h3>
                 <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
-                  Deep house, disco house y funky house cuidadosamente
-                  seleccionados para crear la atmósfera perfecta en cada sesión.
+                  Sumérgete en una selección exquisita de deep house, disco
+                  house y funky house, cuidadosamente curada para crear momentos
+                  mágicos que elevarán tus sentidos a otro nivel.
                 </p>
               </div>
 
@@ -238,12 +225,12 @@ export default function Home() {
                   <MapPin className="w-6 h-6 text-neon-cyan group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-cyan transition-colors">
-                  Espacios Únicos
+                  Bares Extraordinarios
                 </h3>
                 <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
-                  Bares y restaurantes seleccionados por su ambiente exclusivo,
-                  donde cada rincón está pensado para vivir una experiencia
-                  especial.
+                  Descubre los espacios más exclusivos de la ciudad, donde cada
+                  detalle está diseñado para ofrecerte una experiencia sensorial
+                  incomparable en ambientes de lujo.
                 </p>
               </div>
 
@@ -252,12 +239,12 @@ export default function Home() {
                   <Sparkles className="w-6 h-6 text-neon-magenta group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-magenta transition-colors">
-                  Momentos Mágicos
+                  Conexiones Premium
                 </h3>
                 <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
-                  Cada sesión está diseñada para crear recuerdos inolvidables,
-                  donde amigos, música y gastronomía se encuentran en perfecta
-                  armonía.
+                  Vive momentos únicos en un ambiente selecto donde la música,
+                  la gastronomía y las conexiones sociales se entrelazan para
+                  crear experiencias que transformarán tus noches.
                 </p>
               </div>
             </div>
@@ -360,10 +347,11 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
               {sponsors.map((sponsor) => (
-                <div  key={sponsor.id} className="flex flex-col justify-center gap-2">
-                  <div
-                    className="group w-full relative p-4 rounded-lg transform hover:scale-110 transition-all duration-300 bg-slate-800/30"
-                  >
+                <div
+                  key={sponsor.id}
+                  className="flex flex-col justify-center gap-2"
+                >
+                  <div className="group w-full relative p-4 rounded-lg transform hover:scale-110 transition-all duration-300 bg-slate-800/30">
                     <div className="absolute inset-0 bg-gradient-to-r from-neon-pink/20 to-neon-cyan/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative aspect-square">
                       <Image
@@ -374,9 +362,9 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <a 
-                    href={sponsor.url ?? '#'} 
-                    className="text-white/60 hover:text-white transition-colors text-sm font-medium tracking-wide hover:bg-gradient-to-r hover:from-neon-pink hover:to-neon-cyan hover:bg-clip-text hover:text-transparent" 
+                  <a
+                    href={sponsor.url ?? "#"}
+                    className="text-white/60 hover:text-white transition-colors text-sm font-medium tracking-wide hover:bg-gradient-to-r hover:from-neon-pink hover:to-neon-cyan hover:bg-clip-text hover:text-transparent"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

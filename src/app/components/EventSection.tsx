@@ -31,7 +31,7 @@ const EventSection = () => {
           </h2>
           
           <p className="text-white/90 leading-relaxed text-lg">
-            Sé parte de la revolución musical que está transformando las noches de Resistencia. Descubre una experiencia sensorial única donde el deep house, disco house y funky house se fusionan en una cuidadosa selección musical que elevará tus sentidos. Durante 8 noches exclusivas, los venues más prestigiosos de la ciudad se convertirán en el epicentro de la cultura electrónica.
+            Sé parte de la revolución musical que está transformando las noches de Resistencia. Descubre una experiencia sensorial única donde el deep house, disco house y funky house se fusionan en una cuidadosa selección musical que elevará tus sentidos. Durante 8 noches exclusivas, los bares más prestigiosos de la ciudad se convertirán en el epicentro de la cultura electrónica.
           </p>
 
           <div className="space-y-8">
@@ -44,7 +44,7 @@ const EventSection = () => {
                   <li>Sonido de clase mundial: deep house, disco house y funky house cuidadosamente seleccionados para crear la atmósfera perfecta.</li>
                   <li>Espacios VIP diseñados para networking, donde la música se convierte en el lenguaje universal de conexión.</li>
                   <li>Horarios premium after office: el momento perfecto para desconectar y vivir una experiencia única.</li>
-                  <li>Fusión gastronómica exclusiva: cada venue ofrece una propuesta culinaria que complementa la experiencia musical.</li>
+                  <li>Fusión gastronómica exclusiva: cada bar ofrece una propuesta culinaria que complementa la experiencia musical.</li>
                 </ul>
               </div>
             </div>
