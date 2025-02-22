@@ -234,12 +234,11 @@ export default function SponsorsPage() {
 
               <div className="mb-12">
                 <p className="text-lg md:text-xl p-0 md:pr-40 text-white/80 leading-relaxed">
-                  Sé parte de <strong>Chill & Groove Sessions</strong>, donde la
-                  música electrónica y las marcas premium convergen.{" "}
-                  <strong>8 noches</strong> exclusivas en los mejores bares de
-                  Resistencia.
+                  Sé parte de <strong>Chill & Groove Sessions</strong>, donde la música 
+                  electrónica y las marcas premium convergen. <strong>8 noches</strong> exclusivas 
+                  en los mejores bares de Resistencia.
                   <span className="block mt-2">
-                    Marzo-Abril 2025: La nueva era del entretenimiento.
+                    Mayo 2025: La nueva era del entretenimiento.
                   </span>
                 </p>
               </div>

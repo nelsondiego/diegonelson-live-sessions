@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import {
   Music4,
@@ -199,7 +198,7 @@ export default function Home() {
                   Resistencia.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Durante marzo y abril, cada bar se transforma en un escenario
+                  Durante mayo, cada bar se transforma en un escenario
                   perfecto donde los beats, la gastronomía y las buenas vibras
                   se fusionan para crear momentos inolvidables.
                 </p>
@@ -403,7 +402,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <ShareButton
                   title="Chill & Groove Sessions"
-                  date="Marzo y Abril 2024"
+                  date="Mayo 2025"
                   time="Diferentes horarios"
                   location="Resistencia, Chaco"
                 />
