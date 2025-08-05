@@ -6,6 +6,7 @@ import { formatBytes } from "./util";
 const NavApi = () => {
   const [quota, setQuota] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(true);
+  const [available, setAvailable] = useState<boolean>(true);
   useEffect(() => {
     const getStorage = async () => {
       if (navigator.storage && navigator.storage.estimate) {
@@ -13,6 +14,7 @@ const NavApi = () => {
         setQuota(quota || 0);
         setLoading(false);
       } else {
+        setAvailable(false);
         setLoading(false);
       }
     };
@@ -26,7 +28,11 @@ const NavApi = () => {
       ) : (
         <div className="flex items-center justify-center gap-2 bg-slate-800 p-6 rounded-md">
           <Database />
-          <span>Storage available: {formatBytes(quota)}</span>
+          {available ? (
+            <span>Storage available: {formatBytes(quota)}</span>
+          ) : (
+            <span>Storage not available</span>
+          )}
         </div>
       )}
     </div>
